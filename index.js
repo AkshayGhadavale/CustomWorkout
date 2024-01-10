@@ -65,27 +65,27 @@
             "break",
             0,
             10,
-            "./images/coach-coach-josh-wood.gif",
+            "/images/coach-coach-josh-wood.gif",
           ],
           [
             "Plank",
             2,0,
-            "./images/coach-coach-josh-wood.gif",
+            "/images/coach-coach-josh-wood.gif",
           ],
           [
             "pushups",
             4,0,
-            "./images/pushup.gif",
+            "/images/pushup.gif",
           ],
           [
             "Crunches",
             6,0,
-            "./images/abdominal-supra-abdominal.gif",
+            "/images/abdominal-supra-abdominal.gif",
           ],
           [
             "Boxing",
             5,0,
-            "./images/pov-boxing.gif",
+            "/images/pov-boxing.gif",
           ],
         ];
         let currentIndex = 0;
