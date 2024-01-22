@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #87CEEB; /* Sky Blue */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .mandir {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      background-color: #D2B48C; /* Tan */
+      border: 2px solid #8B4513; /* Saddle Brown */
+      border-radius: 10px;
+    }
+
+    .dome {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      width: 120px;
+      height: 70px;
+      background-color: #FFD700; /* Gold */
+      border-radius: 50% 50% 0 0;
+      transform: translateX(-50%);
+    }
+
+    .temple {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 200px;
+      height: 250px;
+      background-color: #A52A2A; /* Brown */
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="mandir">
+    <div class="dome"></div>
+    <div class="temple"></div>
+  </div>
+</body>
+</html>

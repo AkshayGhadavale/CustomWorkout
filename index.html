@@ -20,42 +20,63 @@
             />
           </div>
           <div class="countdownsec">
-            <div class="exrname"><span id="text1">Task 1 </span></div>
+            <div class="exrname"><span id="text1">WorkOut Name </span></div>
             <div class="count" id="count">
               <h1 id="min"></h1>
               <h1 id="seconds"></h1>
               <h1 id="milisec"></h1>
             </div>
+            <div id="popup">
+              <h3 id="popupText"></h3>
+            </div>
           </div>
+        
         </div>
-        <div id="popup">
-          <h3 id="popupText"></h3>
-        </div>
+      
         <div id="buttons">
           <div class="btnsec1">
           <button class="button-9" id="startButton">Start</button>
-          <button class="button-9" id="stopButton">Stop</button>
+          <button class="button-9" id="nextbutton">Next</button>
+        
         </div>
         <div class="btnsec1">
-          <button class="button-9" id="nextbutton">Next</button>
+          <button class="button-9" id="stopButton">Stop</button>
           <button class="button-9" id="previousbutton">Previous</button>
+        
         </div>
         </div>
+        <div class="editsec">
         <div class="containersec">
           <ul> <li class="firstsec">
             <h3>Exerise Name</h3>
             <h3>Time</h3></ul>
-          <ul id="list">
+         
             
             </li>
+            <ul id="list">
             <!-- <li class="exerciseitem"><h3 class="exitemname" id="exercisename">pushaps</h3> <input class="exitemtime" type="number" name="" id="time"></li> -->
             <!-- <li><span id="text1">Task 1 </span>- <span id="time1">2</span> min</li>
             <li>Task 1 - <span id="time1">2</span> min</li> -->
 
             <!-- Add more list items as needed -->
           </ul>
-          
+        
         </div>
+        <div class="addsection">
+          <input type="text" id="nameex" placeholder="entername">
+          <input type="text" id="minex" placeholder="enter min">
+          <input type="text" id="secex" placeholder="enter sec">
+          <input type="text" id="imagelink" placeholder="imagelink">
+          <button id="addrow" class="button-9"> add Exerise</button>
+
+
+        </div>
+        
+    </div>
+    <!-- <div class="buttonsec">
+ 
+      <button id="arraybtn" class="button-9">array upadte</button>
+    </div> -->
       </div>
     </div>
     <script src="./index.js"></script>
