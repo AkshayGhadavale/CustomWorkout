@@ -1,5 +1,3 @@
-
-
 let timearray = [
   ["Plank", 2, 0, "./images/coach-coach-josh-wood.gif"],
   ["pushups", 4, 0, "./images/pushup.gif"],
@@ -12,32 +10,32 @@ let count2;
 
 function showeex() {
   const listElement = document.getElementById("list");
-  listElement.innerHTML = ''; // Clear the existing list
+  listElement.innerHTML = ""; // Clear the existing list
 
   for (let i = 0; i < timearray.length; i++) {
     let item = document.createElement("li");
     item.className = "exerciseitem";
     item.draggable = true;
-    item.setAttribute("data-index", i); 
+    item.setAttribute("data-index", i);
 
     let name = document.createElement("input");
     name.type = "text";
     name.className = "exitemname";
     name.id = `exercisename${i}`;
     name.value = timearray[i][0];
-    name.readOnly=true;
+    name.readOnly = true;
 
     let minnum = document.createElement("input");
     minnum.type = "text";
     minnum.id = `time${i}`;
     minnum.value = timearray[i][1];
-    minnum.readOnly=true;
+    minnum.readOnly = true;
 
     let secnum = document.createElement("input");
     secnum.type = "text";
     secnum.id = `timesec${i}`;
     secnum.value = timearray[i][2];
-    secnum.readOnly=true;
+    secnum.readOnly = true;
 
     let timex = document.createElement("div");
     timex.className = "exitemtime";
@@ -49,60 +47,60 @@ function showeex() {
 
     // Add Edit button
     let editButton = document.createElement("div");
-    editButton.value='edit'
-   editButton.style.width="20px";
-   editButton.style.height="20px";
-    editButton.style.backgroundImage="url(./images/icons8-edit-96.png)"
-    editButton.style.backgroundPosition="center"
-    editButton.style.backgroundSize="cover"
-    editButton.style.backgroundRepeat="norepeat"
+    editButton.value = "edit";
+    editButton.style.width = "20px";
+    editButton.style.height = "20px";
+    editButton.style.backgroundImage = "url(./images/icons8-edit-96.png)";
+    editButton.style.backgroundPosition = "center";
+    editButton.style.backgroundSize = "cover";
+    editButton.style.backgroundRepeat = "norepeat";
 
     editButton.id = `editbutton${i}`;
     editButton.addEventListener("click", () => {
       if (editButton.value === "edit") {
         editButton.value = "Save";
-        editButton.style.width="20px";
-        editButton.style.fontSize='0'
-   editButton.style.height="20px";
-    editButton.style.backgroundImage="url(./images/icons8-save-96.png)"
-    editButton.style.backgroundPosition="center"
-    editButton.style.backgroundSize="cover"
-    editButton.style.backgroundRepeat="norepeat"
+        editButton.style.width = "20px";
+        editButton.style.fontSize = "0";
+        editButton.style.height = "20px";
+        editButton.style.backgroundImage = "url(./images/icons8-save-96.png)";
+        editButton.style.backgroundPosition = "center";
+        editButton.style.backgroundSize = "cover";
+        editButton.style.backgroundRepeat = "norepeat";
         editItem(i);
       } else {
         arrayupdate();
-        editButton.style.width="20px";
-        editButton.style.height="20px";
-         editButton.style.backgroundImage="url(./images/icons8-edit-96.png)"
-         editButton.style.backgroundPosition="center"
-         editButton.style.backgroundSize="cover"
-         editButton.style.backgroundRepeat="norepeat"
+        editButton.style.width = "20px";
+        editButton.style.height = "20px";
+        editButton.style.backgroundImage = "url(./images/icons8-edit-96.png)";
+        editButton.style.backgroundPosition = "center";
+        editButton.style.backgroundSize = "cover";
+        editButton.style.backgroundRepeat = "norepeat";
         editButton.value = "edit";
-      
-        document.getElementById(`exercisename${i}`).style.backgroundColor ="transparent";
-        document.getElementById(`time${i}`).style.backgroundColor="transparent";
-        document.getElementById(`timesec${i}`).style.backgroundColor ="transparent";
+
+        document.getElementById(`exercisename${i}`).style.backgroundColor =
+          "transparent";
+        document.getElementById(`time${i}`).style.backgroundColor =
+          "transparent";
+        document.getElementById(`timesec${i}`).style.backgroundColor =
+          "transparent";
         document.getElementById(`exercisename${i}`).readOnly = true;
         document.getElementById(`time${i}`).readOnly = true;
         document.getElementById(`timesec${i}`).readOnly = true;
-   
       }
     });
-    
 
     // Add Delete button
     let deleteButton = document.createElement("div");
     deleteButton.value = "Delete";
-    deleteButton.id=`deletebutton${i}`;
-    deleteButton.style.width="20px";
-    deleteButton.style.height="20px";
-     deleteButton.style.backgroundImage="url(./images/icons8-delete-64.png)"
-     deleteButton.style.backgroundPosition="center"
-     deleteButton.style.backgroundSize="cover"
-     deleteButton.style.backgroundRepeat="norepeat"
-    
+    deleteButton.id = `deletebutton${i}`;
+    deleteButton.style.width = "20px";
+    deleteButton.style.height = "20px";
+    deleteButton.style.backgroundImage = "url(./images/icons8-delete-64.png)";
+    deleteButton.style.backgroundPosition = "center";
+    deleteButton.style.backgroundSize = "cover";
+    deleteButton.style.backgroundRepeat = "norepeat";
+
     deleteButton.addEventListener("click", () => {
-      
       deleteItem(i);
     });
 
@@ -141,38 +139,33 @@ function handleDrop(e) {
   showeex();
 }
 
-
 function editItem(i) {
   // Implement the logic to handle editing the item at the specified index
-  
 
- 
-    document.getElementById(`exercisename${i}`).readOnly=false;
-  document.getElementById(`time${i}`).readOnly=false;
-  document.getElementById(`timesec${i}`).readOnly=false;
-  document.getElementById(`exercisename${i}`).style.backgroundColor="#ffffff"
-  document.getElementById(`time${i}`).style.backgroundColor="#ffffff"
-  document.getElementById(`timesec${i}`).style.backgroundColor="#ffffff"
+  document.getElementById(`exercisename${i}`).readOnly = false;
+  document.getElementById(`time${i}`).readOnly = false;
+  document.getElementById(`timesec${i}`).readOnly = false;
+  document.getElementById(`exercisename${i}`).style.backgroundColor = "#ffffff";
+  document.getElementById(`time${i}`).style.backgroundColor = "#ffffff";
+  document.getElementById(`timesec${i}`).style.backgroundColor = "#ffffff";
 
   let newName = document.getElementById(`exercisename${i}`).value;
-  let newMin = document.getElementById(`time${i}`).value
-  let newSec = document.getElementById(`timesec${i}`).value
+  let newMin = document.getElementById(`time${i}`).value;
+  let newSec = document.getElementById(`timesec${i}`).value;
 
-  document.getElementById(`editbutton${i}`).innerText='save'
-
+  document.getElementById(`editbutton${i}`).innerText = "save";
 
   if (newName !== null && newMin !== null && newSec !== null) {
     timearray[index] = [newName, Number(newMin), Number(newSec)];
     showeex(); // Refresh the list after editing
   }
-  
- 
 }
 
 function deleteItem(index) {
   // Implement the logic to handle deleting the item at the specified index
   timearray.splice(index, 1);
   showeex(); // Refresh the list after deletion
+  saveToLocalStorage();
 }
 
 document.getElementById("nextbutton").addEventListener("click", () => {
@@ -313,32 +306,72 @@ function arrayupdate() {
     timearray[i][0] = document.getElementById(`exercisename${i}`).value;
     timearray[i][1] = document.getElementById(`time${i}`).value;
     timearray[i][2] = document.getElementById(`timesec${i}`).value;
-
   }
   console.log(timearray);
 }
 
 document.getElementById("addrow").addEventListener("click", () => {
+
+ 
   addex();
+  saveToLocalStorage();
+
+
+
 });
+
+
+// Function to save timearray to local storage
+function saveToLocalStorage() {
+  localStorage.setItem('timearray', JSON.stringify(timearray));
+}
+
+// Function to load timearray from local storage
+function loadFromLocalStorage() {
+  const storedTimeArray = localStorage.getItem('timearray');
+  if (storedTimeArray) {
+    timearray = JSON.parse(storedTimeArray);
+  }
+}
+
+// Call the load function when the script runs to load any previously saved data
+loadFromLocalStorage();
+
 
 function addex() {
   let exname = document.getElementById("nameex").value;
   let minex = document.getElementById("minex").value;
   let secex = document.getElementById("secex").value;
   let imagelink = document.getElementById("imagelink").value;
-  console.log(exname, minex, secex,imagelink);
-  timearray.push([exname, Number(minex), Number(secex),imagelink]);
+
+  // Check if any of the input values is empty
+  if (!exname || !minex || !secex ) {
+    alert("Please fill in all the fields");
+    return; // Exit the function if any value is empty
+  }
+
+  // Check if minex and secex are numeric values
+  if (isNaN(minex) || isNaN(secex)) {
+    alert("Please enter valid numeric values for minutes and seconds");
+    return; // Exit the function if minex or secex is not a number
+  }
+
+  // Convert minex and secex to numbers
+  minex = Number(minex);
+  secex = Number(secex);
+
+  console.log(exname, minex, secex, imagelink);
+  timearray.push([exname, minex, secex, imagelink]);
   console.log(timearray);
 
-// Remove all child elements from the "list" element
-let listElement = document.getElementById("list");
-while (listElement.firstChild) {
-  listElement.removeChild(listElement.firstChild);
+  // Remove all child elements from the "list" element
+  let listElement = document.getElementById("list");
+  while (listElement.firstChild) {
+    listElement.removeChild(listElement.firstChild);
+  }
+
+  // Reshow the list
+  showeex();
+  saveToLocalStorage();
 }
 
-// reshow  the list
-showeex();
-
-
-}

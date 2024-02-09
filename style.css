@@ -60,6 +60,7 @@ body {
     -webkit-user-select: none;
     touch-action: manipulation;
     width: 100%;
+    font-weight: bold;
   }
 
   .button-9:disabled {
@@ -75,7 +76,7 @@ body {
   #list-container {
     width: 60%;
     height: 90%;
-    background-color: #fff;
+    background-color: #e0d1d1c0;
    
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -208,9 +209,9 @@ body {
   }
   .addsection{
     width: 40%;
-    height: 70%;
-    background-color:grey ;
-    background-color: #fff;
+    height: 62%;
+    background-color:#cec7c7cf ;
+
     border-radius: 8px;
   
     padding: 20px;
@@ -231,7 +232,13 @@ body {
     font-optical-sizing: auto;
     font-weight: bolder;
     font-style: normal;
+    background-color: #555;
+    color: #fff;
     font-size: 15px;
+}
+::placeholder{
+  color: rgba(255, 254, 254, 0.74);
+  opacity: 1; 
 }
 
 button {
@@ -325,9 +332,32 @@ padding-left: 20PX;
     }
   }
 
-
-
-
+.appname {
+  font-family: Arial, sans-serif;
+  width: 60%;
+      background-color: #1a1a1a;
+      padding: 0px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin: 20px;
+}
+.appname h2{
+  font-size: 25px;
+      font-weight: bold;
+      color: #ff5733;;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.heading{
+font-size:40px;
+font-weight: bold;
+color: #ff5733;;
+text-transform: uppercase;
+letter-spacing: 2px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 
 
@@ -408,13 +438,15 @@ padding-left: 20PX;
     #list-container {
       width: 100%;
       height: 90%;
-      background-color: #fff;
+  
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #979393c0;
+    
     }
   
     ul {
@@ -502,7 +534,7 @@ padding-left: 20PX;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-     
+    
     }
     .exitemname {
       width: 40%;
@@ -625,16 +657,21 @@ padding-left: 20PX;
     }
     
     .addsection{
-    width: 90%;
-    height: 50%;
-    background-color: grey;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
+      width: 82%;
+      height: 50%;
+      background-color: #cec7c7cf;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 20px 20px 20px;
+      text-align: center;
    
     }
-   
+    .appname{
+      width: 90%;
+    }
+    .heading{
+      font-size: 40px;
+    }
 
 
 }
