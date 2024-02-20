@@ -327,6 +327,12 @@ function addex() {
   let minex = document.getElementById("minex").value;
   let secex = document.getElementById("secex").value;
   let imagelink = document.getElementById("imagelink").value;
+
+  if(exname=='' && minex=='' && secex==''&& imagelink==''){
+alert('somethings missing')
+  }else{
+
+  
   console.log(exname, minex, secex,imagelink);
   timearray.push([exname, Number(minex), Number(secex),imagelink]);
   console.log(timearray);
@@ -336,7 +342,7 @@ let listElement = document.getElementById("list");
 while (listElement.firstChild) {
   listElement.removeChild(listElement.firstChild);
 }
-
+  }
 // reshow  the list
 showeex();
 
