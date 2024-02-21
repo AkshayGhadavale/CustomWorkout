@@ -3,8 +3,8 @@
 let timearray = [
   ["Plank", 2, 0, "./images/coach-coach-josh-wood.gif"],
   ["pushups", 4, 0, "./images/pushup.gif"],
-  ["Crunches", 6, 0, "./images/abdominal-supra-abdominal.gif"],
-  ["Boxing", 5, 0, "./images/pov-boxing.gif"],
+  ["Crunches", 0, 10, "./images/abdominal-supra-abdominal.gif"],
+  ["Boxing", 0, 10, "./images/pov-boxing.gif"],
 ];
 let currentIndex = 0;
 let timer;
@@ -176,10 +176,21 @@ function deleteItem(index) {
 }
 
 document.getElementById("nextbutton").addEventListener("click", () => {
-  console.log(currentIndex);
+if(currentIndex>=timearray.length-1){
+  alert("Workouts finish")
+  document.getElementById("min").innerText = '00';
+  document.getElementById("seconds").innerText = '00';
+   currentIndex = 0;
+ timer=0;
+ count2=0;
+}else{
+  console.log(`this is array length ${timearray.length}`)
   clearInterval(timer);
   loopmain(timearray[currentIndex + 1]);
   currentIndex++;
+  console.log(`this is current index ${currentIndex}`);
+  
+  }
 });
 document.getElementById("previousbutton").addEventListener("click", () => {
   loopmain(timearray[currentIndex - 1]);
@@ -210,7 +221,7 @@ function showPopupWithTimer(timerDuration, callback) {
 }
 
 function loopmain(data) {
-  console.log(data);
+  console.log(`get data form nextbutton ${data}`);
 
   document.getElementById("text1").innerText = data[0];
   // console.log(`main data ${data[1]}`);
@@ -246,23 +257,51 @@ function loopmain(data) {
         sec--;
 
         if (sec === 0 && min === 0) {
-          clearInterval(timer);
+          
+          if(currentIndex>=timearray.length-1){
+            alert("All exercises completed auto");
+            
+             currentIndex = 0;
+             timer=0;
+             count2=0;
+             clearInterval(timer);
+             document.getElementById("min").innerText = '00';
+            document.getElementById("seconds").innerText = '00';
+            
+          }else{
+            clearInterval(timer);
           showPopupWithTimer(10, () => {
             if (currentIndex < timearray.length - 1) {
               currentIndex++;
               loopmain(timearray[currentIndex]);
             } else {
-              alert("All exercises completed");
+//               alert("All exercises completed");
+//               document.getElementById("min").innerText = '00';
+//               document.getElementById("seconds").innerText = '00';
+//                currentIndex = 0;
+//  timer=0;
+//  count2=0;
             }
-          });
+          });}
         }
       }
 
       if (sec == 0) {
         sec = 60;
         start = 60;
-        min--;
+        if(currentIndex>=timearray.length-1)
+        { document.getElementById("min").innerText ='00';
+        currentIndex = 0;
+             timer=0;
+             count2=0;
+            }
+            else{
+        // min--;
+      }
+      
+         
         document.getElementById("min").innerText = min;
+       
         if (min < 0) {
           min = 0;
           clearInterval(timer);
