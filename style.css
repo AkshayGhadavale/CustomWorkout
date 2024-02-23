@@ -74,12 +74,25 @@ body {
   }
 
   #list-container {
-    width: 60%;
-    height: 90%;
+    width: 70%;
+    height: 100%;
     background-color: #e0d1d1c0;
    
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .workoutlistsec{
+    width:25%;
+    height: 60%;
+    background-color: #e0d1d1c0;
+   
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   ul {
@@ -118,6 +131,16 @@ body {
     align-items: center;
     overflow: hidden;
    
+  }
+
+  .submainsection{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+   gap:20px;
+    
   }
   
   .timesection {
@@ -336,7 +359,8 @@ padding-left: 20PX;
 
 .appname {
   font-family: Arial, sans-serif;
-  width: 60%;
+  width: 98%;
+  height: 10%;
       background-color: #0B1725;
       padding: 0px;
       border-radius: 10px;
@@ -369,7 +393,7 @@ padding-left: 20PX;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-      font-size: 40px;
+      font-size: 20px;
 }
 
 @keyframes textclip {
@@ -393,322 +417,513 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
+.headname{
+  width:100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+height: 10%;
+  padding-left: 20px;
+  gap: 40px;
+}
 
+.workout-list{
+  width: 94%;
+ background-color: #cec7c7cf;
+height: 86%;
+border-radius: 8px;
+overflow: scroll;
+}
 
+.buutonaddsec{
+  width: 94%;
+  background-color: #ffffffcf;
+ height: 10%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 
+ padding-right: 20px;
 
+}
+.buutonaddsec button{
+  width: 90%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  @media only screen and (max-width: 768px) {
-
-    #buttons {
-      width: 90%;
-      height: 10%;
-      display: flex;
-    
-      justify-content: space-around;
-     
-      gap: 20px;
-    }
-  
-    .button-9 {
-      margin: 20px;
-      appearance: button;
-      backface-visibility: hidden;
-      background-color: #0B1725;
-      border-radius: 6px;
-      border-width: 0;
-      box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-        rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
-      box-sizing: border-box;
-      color: #fff;
-      cursor: pointer;
-      font-family: -apple-system, system-ui, "Segoe UI", Roboto,
-        "Helvetica Neue", Ubuntu, sans-serif;
-      font-size: 100%;
-      height: 44px;
-      line-height: 1.15;
-      margin: 12px 0 0;
-      outline: none;
-      overflow: hidden;
-      padding: 0 25px;
-      position: relative;
-      text-align: center;
-      text-transform: none;
-      transform: translateZ(0);
-      transition: all 0.2s, box-shadow 0.08s ease-in;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      width: 100%;
-    }
-  
-    .button-9:disabled {
-      cursor: default;
-    }
-  
-    .button-9:focus {
-      box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-        rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
-        rgba(50, 151, 211, 0.3) 0 0 0 4px;
-    }
-  
-    .button-9:hover{
-      background-color: #0b1725a1;
-    }
-    #list-container {
-      width: 100%;
-      height: 90%;
-  
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      background-color: #979393c0;
-    
-    }
-  
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-  
-    li {
-      margin-bottom: 10px;
-    }
-    .firstsec {
-      display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: #555;
+.maimlist{
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
-    padding:0px 0px 0px 20px ;
-  gap: 30px;
-    color:#f4f4f4;
-    }
-    .exerciseitem {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
+    background-color: #777272;
+}
+.maimlist .imgsec{
+  padding: 10px 0px 10px 0px;
+  width: 60px;
+  height: 60px;
+}
+
+.maimlist .addicon{
+  width: 30px;
+  height: 30px;
+}
+
+#Searchbox{
+
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: #777272;
+    color: #ffffff;
+    background-size: 12%;
+    background-image: url('./images/icons8-search-30.png');
+    background-position: 5px 5px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+  }
+  
+ 
 
 
-    .exitemname {
-      width: 50%;
-      display: flex;
-  padding-left: 20PX;
-      justify-content: center;
-      align-items: flex-start;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+  #buttons {
+    width: 90%;
+    height: 10%;
+    display: flex;
   
+    justify-content: space-around;
+   
+    gap: 20px;
+  }
+  .submainsection{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+  .button-9 {
+    margin: 20px;
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #0B1725;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+      rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto,
+      "Helvetica Neue", Ubuntu, sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all 0.2s, box-shadow 0.08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+  }
+
+  .button-9:disabled {
+    cursor: default;
+  }
+
+  .button-9:focus {
+    box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+      rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+      rgba(50, 151, 211, 0.3) 0 0 0 4px;
+  }
+
+  .button-9:hover{
+    background-color: #0b1725a1;
+  }
+  #list-container {
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #979393c0;
   
+  }
+
+  .workoutlistsec{
+    width:100%;
+    height: 20%;
+    background-color: transparent;
+  }
+
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+  .firstsec {
+    display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #555;
+  border-radius: 10px;
+  margin: 10px;
+  padding:0px 0px 0px 20px ;
+gap: 30px;
+  color:#f4f4f4;
+  }
+  .exerciseitem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  .exitemname {
+    width: 50%;
+    display: flex;
+padding-left: 20PX;
+    justify-content: center;
+    align-items: flex-start;
+
+
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+  font-size: 15px;
+
+  }
+  .exitemtime {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-end;
+    width: 30%;
+    gap: 0px;
+
+ 
+  }
+  .buttons{
+    width: 20%;
+    display: flex;
+
+    justify-content: center;
+    gap: 10px;
+    align-items: flex-start;
+  
+  }
+  .exitemtime input{
+    text-align: right;
+    width:20px;
+    height: 20px;
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-weight: bolder;
     font-style: normal;
     font-size: 15px;
+  }
+
+
+
+
+
+
+
+
+  .mainsection {
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   
-    }
-    .exitemtime {
-      display: flex;
-  
-      justify-content: center;
-      align-items: flex-end;
-      width: 30%;
-      gap: 0px;
-  
+  }
+
+.submainsection{
+width: 100%;
+height: 90%;
+display: flex;
+
+justify-content: center;
+align-items: center;
+}
+
+  .exitemname {
+    width: 40%;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+  .exitemtime {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+  }
+  .timesection {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
    
-    }
-    .buttons{
-      width: 20%;
-      display: flex;
+  }
+  .imgsec {
+    width: 90%;
+    height: 50%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .imgsec img {
+    width: 100%;
   
-      justify-content: center;
-      gap: 10px;
-      align-items: flex-start;
-    
-    }
-    .exitemtime input{
-      text-align: right;
-      width:20px;
-      height: 20px;
-      font-family: "Roboto Mono", monospace;
-      font-optical-sizing: auto;
-      font-weight: bolder;
-      font-style: normal;
-      font-size: 15px;
-    }
+    border-radius: 10px;
+    height: 100%;
+  }
+  .countdownsec {
+    height: 50%;
+    width: 100%;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .exrname {
+    width: 100%;
+    height: 20%;
+    padding-top: 20px;
+  }
+  .count {
+    width: 100%;
+    height: 80%;
+    display: flex;
 
+    justify-content: space-around;
+    align-items: center;
+  }
 
+  h1 {
+    font-size: 60px;
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #444;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation: countdown 1s ease infinite; */
+    color: #f4f4f4;
+  }
+  #milisec {
+    visibility: hidden;
+    font-size: 0px;
+    margin: 0;
+    padding: 0px;
 
-
-
-
-
-    .mainsection {
-      width: 100%;
-      height: 200vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    
-    }
-    .exitemname {
-      width: 40%;
-      display: flex;
-  
-      justify-content: center;
-      align-items: center;
-    }
-    .exitemtime {
-      display: flex;
-  
-      justify-content: center;
-      align-items: center;
-      width: 40%;
-    }
-    .timesection {
-      height: 40%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-     
-    }
-    .imgsec {
-      width: 90%;
-      height: 50%;
-      padding: 10px;
-      border-radius: 10px;
-    }
-  
-    .imgsec img {
-      width: 100%;
-    
-      border-radius: 10px;
-      height: 100%;
-    }
-    .countdownsec {
-      height: 50%;
-      width: 100%;
-  
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .exrname {
-      width: 100%;
-      height: 20%;
-      padding-top: 20px;
-    }
-    .count {
-      width: 100%;
-      height: 80%;
-      display: flex;
-  
-      justify-content: space-around;
-      align-items: center;
-    }
-  
-    h1 {
-      font-size: 60px;
-      margin: 0;
-      width: 100px;
-      height: 100px;
-      background-color: #444;
-      border-radius: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* animation: countdown 1s ease infinite; */
-      color: #f4f4f4;
-    }
-    #milisec {
-      visibility: hidden;
-      font-size: 0px;
-      margin: 0;
-      padding: 0px;
-
-      border-radius: 0px;
-      display: inline-block;
-      display: none;
-    }
-    .exrname {
-      font-size: 20px;
-      color: #0B1725;
-      font-weight: bold;
-      text-align: center;
-    }
-    .editsec{
-     
-          width: 100%;
-          height: 50%;
-      display: flex;
-      flex-direction: column;
-       
-        
-    }
-    .containersec{
-      width: 90%;
-      height: 50%;
-      overflow: auto;
-      margin-top: 30px;
-      background-color: #cec7c7cf;
-      border-radius: 10px;
-      margin: 0px 0px 20px 20px;
-     
-    }
-  /* .buttonsec{
-      width: 40%;
-      height: 100%;
-  } */
-  
-    #list{
+    border-radius: 0px;
+    display: inline-block;
+    display: none;
+  }
+  .exrname {
+    font-size: 20px;
+    color: #0B1725;
+    font-weight: bold;
+    text-align: center;
+  }
+  .editsec{
    
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-   
-
+        width: 100%;
+        height: 50%;
+    display: flex;
+    flex-direction: column;
+     
       
-    }
-    
-    .addsection{
-      width: 79%;
-      height: 50%;
-      background-color: #cec7c7cf;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 20px 20px 20px 20px;
-      text-align: center;
-      margin: 0px 0px 20px 20px;
+  }
+  .containersec{
+    width: 90%;
+    height: 50%;
+    overflow: auto;
+    margin-top: 30px;
+    background-color: #cec7c7cf;
+    border-radius: 10px;
+    margin: 0px 0px 20px 20px;
    
-    }
-    .appname{
-      width: 90%;
-    }
-    .heading{
-      font-size: 40px;
-    }
+  }
+ 
+/* .buttonsec{
+    width: 40%;
+    height: 100%;
+} */
 
+  #list{
+ 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+ 
+
+    
+  }
+  
+  .addsection{
+    width: 79%;
+    height: 50%;
+    background-color: #cec7c7cf;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 20px 20px 20px;
+    text-align: center;
+    margin: 0px 0px 20px 20px;
+ 
+  }
+ 
+.appname {
+  font-family: Arial, sans-serif;
+  width: 98%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+      background-color: #0B1725;
+      padding: 0px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-bottom: 40px;
+}
+.appname h2 {
 
 }
+
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 30px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+  .headname{
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  height: 10%;
+padding-top:10px ;
+    padding-left: 20px;
+  }
+  .buutonaddsec{
+    width: 94%;
+    background-color: #ffffffcf;
+   height: 15%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+
+   padding-right: 20px;
+ 
+  }
+  
+  .workout-list{
+    width: 94%;
+   background-color: #cec7c7cf;
+  height: 75%;
+  border-radius: 8px;
+  overflow: scroll;
+  }
+  .maimlist{
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 0px 20px 0px 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      background-color: #777272;
+  }
+  .maimlist .imgsec{
+    padding: 10px 0px 10px 0px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .maimlist .addicon{
+    width: 30px;
+    height: 30px;
+  }
+  
+  
+
+}
+
+
+
