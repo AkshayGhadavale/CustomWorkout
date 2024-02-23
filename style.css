@@ -320,6 +320,10 @@ padding-left: 20PX;
     font-style: normal;
     font-size: 15px;
   }
+  .exerciseitem img{
+    width: 20px;
+    height: 20px;
+  }
 
   @keyframes countdown {
     0% {
@@ -510,6 +514,11 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
       align-items: center;
     }
 
+    .exerciseitem img{
+      width: 20px ;
+      height: 20px;
+
+    }
 
     .exitemname {
       width: 50%;
@@ -517,8 +526,7 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   padding-left: 20PX;
       justify-content: center;
       align-items: flex-start;
-  
-  
+
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-weight: bolder;
@@ -528,7 +536,6 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
     .exitemtime {
       display: flex;
-  
       justify-content: center;
       align-items: flex-end;
       width: 30%;
@@ -556,6 +563,10 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
       font-size: 15px;
     }
 
+     img{
+      width: 20px;
+      height: 20px;
+    }
 
 
 

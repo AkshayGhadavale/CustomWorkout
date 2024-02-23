@@ -1,11 +1,44 @@
 
+let timearray;
 
-let timearray = [
-  ["Plank", 2, 0, "./images/coach-coach-josh-wood.gif"],
-  ["pushups", 4, 0, "./images/pushup.gif"],
-  ["Crunches", 0, 10, "./images/abdominal-supra-abdominal.gif"],
-  ["Boxing", 0, 10, "./images/pov-boxing.gif"],
-];
+function callApi(){
+  const token = localStorage.getItem('token')
+  fetch("http://localhost:9000/excersise",{
+    method:"GET",
+    headers:{
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json'
+    }
+  }).then(res=>{
+    if(!res.ok){
+      throw new Error("No data found")
+    }
+
+    return res.json()
+  }).then(data=>{
+    timearray = data
+    console.log(timearray)
+    showeex();
+  })
+  .catch(err=>console.log(err))
+}
+
+
+setTimeout(()=>{
+
+  callApi()
+}, 3000)
+
+
+
+
+
+// let timearray = [
+//   ["Plank", 2, 0, "./images/coach-coach-josh-wood.gif"],
+//   ["pushups", 4, 0, "./images/pushup.gif"],
+//   ["Crunches", 0, 10, "./images/abdominal-supra-abdominal.gif"],
+//   ["Boxing", 0, 10, "./images/pov-boxing.gif"],
+// ];
 let currentIndex = 0;
 let timer;
 let count2;
@@ -24,24 +57,30 @@ function showeex() {
     name.type = "text";
     name.className = "exitemname";
     name.id = `exercisename${i}`;
-    name.value = timearray[i][0];
+    name.value = timearray[i].name;
     name.readOnly=true;
+
+    
+    let imag = document.createElement("img");
+    imag.src = timearray[i].image
+    // imag.style.width="20px"
 
     let minnum = document.createElement("input");
     minnum.type = "text";
     minnum.id = `time${i}`;
-    minnum.value = timearray[i][1];
+    minnum.value = timearray[i].time;
     minnum.readOnly=true;
 
-    let secnum = document.createElement("input");
+    let  secnum= document.createElement("input");
     secnum.type = "text";
-    secnum.id = `timesec${i}`;
-    secnum.value = timearray[i][2];
+    secnum.id = `time${i}`;
+    secnum.value = timearray[i].time;
     secnum.readOnly=true;
+
 
     let timex = document.createElement("div");
     timex.className = "exitemtime";
-
+    timex.appendChild(imag)
     timex.appendChild(minnum);
     timex.appendChild(secnum);
     item.appendChild(name);
@@ -138,7 +177,7 @@ function handleDrop(e) {
   timearray.splice(toIndex, 0, draggedItem);
 
   // Redraw the list
-  showeex();
+
 }
 
 
@@ -192,10 +231,15 @@ if(currentIndex>=timearray.length-1){
   
   }
 });
+
+
 document.getElementById("previousbutton").addEventListener("click", () => {
   loopmain(timearray[currentIndex - 1]);
   currentIndex--;
+  console.log(currentIndex)
 });
+
+
 
 function showPopupWithTimer(timerDuration, callback) {
   const popup = document.getElementById("popup");
@@ -223,15 +267,15 @@ function showPopupWithTimer(timerDuration, callback) {
 function loopmain(data) {
   console.log(`get data form nextbutton ${data}`);
 
-  document.getElementById("text1").innerText = data[0];
+  document.getElementById("text1").innerText = data.name;
   // console.log(`main data ${data[1]}`);
   // console.log(`${data[2]}`);
-  document.getElementById("wkimg").src = data[3];
+  document.getElementById("wkimg").src = data.image;
 
   let start = 60;
-  let min = data[1];
+  let min = data.time;
   console.log(min);
-  let sec = data[2];
+  let sec = data.time;
   let breaktime = 10;
   //   if(min>0){
 
@@ -296,7 +340,7 @@ function loopmain(data) {
              count2=0;
             }
             else{
-        // min--;
+        min--;
       }
       
          
@@ -349,9 +393,9 @@ showeex();
 function arrayupdate() {
   console.log("click");
   for (let i = 0; timearray.length > i; i++) {
-    timearray[i][0] = document.getElementById(`exercisename${i}`).value;
-    timearray[i][1] = document.getElementById(`time${i}`).value;
-    timearray[i][2] = document.getElementById(`timesec${i}`).value;
+    timearray[i].name = document.getElementById(`exercisename${i}`).value;
+    timearray[i].time = document.getElementById(`time${i}`).value;
+    timearray[i].time = document.getElementById(`timesec${i}`).value;
 
   }
   console.log(timearray);
@@ -387,3 +431,8 @@ showeex();
 
 
 }
+
+function callShow (){
+  showeex();
+}
+
