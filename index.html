@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
-    <link rel="stylesheet" href="./index.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
     <!-- <div>
         <form action="" onsubmit="handleLogin(event)" id="loginForm">
             <input type="text" placeholder="enter email" id="email">
@@ -17,128 +16,183 @@
     </div> -->
 
     <div class="wrapper">
-        <div class="modalView" id="modalView">
-                <div id="modalView__closeBtn"></div>
-               
-              </div> 
-            <div id="mainlogin" class="wrap">			
-                <input type="checkbox" id="form_switch" style="display: none;">
-            <div class="flipcard">
-                <div class="flipcard-inner">
-                <div class="flipcard-front">
-                    <form class="login-form" action="" onsubmit="handleLogin(event)" id="loginForm">
-                            <div class="form-header">
-                                <h3>Login Form</h3>
-                                <p>Login to access your dashboard</p>
-                            </div>
-                                <!--Email Input-->
-                            <div class="form-group">
-                            <input type="text" class="form-input" id="email" name="email" placeholder="email@example.com">
-                            </div>
-                            <!--Password Input-->
-                            <div class="form-group">
-                                <input type="password" class="form-input"  type="submit" id="pass" name="password" placeholder="password">
-                            </div>
-                            <!--Login Button-->
-                            <div class="form-group">
-                              <button class="form-buttonlogin" id='loginbtn' type="submit" >Login</button>
-                            </div>
-        
-                            <div class="form-group">
-                                <div class="form-button" id='login'  name="login" value="LOGIN" id="login_button"><div class="text">Login with Google</div><img class="google-icon" src="./images/google.png"/></div
-                                    >
-                              </div>
-        
-                            
-                            <div class="form-footer">
-                             Don't have an account? <label class="label-highlight" for="form_switch"> Sign Up </label>
-                            </div>
-                        </form>
-            </div>
-            <div class="flipcard-back">
-                     <div class="login-form" id="userForm" >
-                        <div class="form-header">
-                             <h3>Signup Form</h3>
-                            <p>Register for a new account</p>
-                        </div>
-                         <!--Email Input-->
-                         <form id="register-form">
-                <div class="form-group">
-                    <input type="text" class="form-input" id="regfirstName" name="name" placeholder="name">
-                      </div>
+      <div class="modalView" id="modalView">
+        <div id="modalView__closeBtn"></div>
+      </div>
+      <div id="mainlogin" class="wrap">
+        <input type="checkbox" id="form_switch" style="display: none" />
+        <div class="flipcard">
+          <div class="flipcard-inner">
+            <div class="flipcard-front">
+              <form
+                class="login-form"
+                action=""
+                onsubmit="handleLogin(event)"
+                id="loginForm"
+              >
+                <div class="form-header">
+                  <h3>Login Form</h3>
+                  <p>Login to access your dashboard</p>
+                </div>
                 <!--Email Input-->
                 <div class="form-group">
-                      <input type="text" class="form-input" id="regemail"  name="email" placeholder="email@example.com">
-                        </div>
-                        <!--Password Input-->
-                        <div class="form-group">
-                           <input type="password" class="form-input"  id="regpassword"  name="password" placeholder="Password">
-                       
-     </div>
-     <div class="form-group checkboxs">
-        <input type="checkbox" id="showpass">Show Password
-       
-    </div>
-                     <!--Password Input-->
-                        <div class="form-group">
-                            <input type="password" id="regpassword1" class="form-input" name="confirm_password" placeholder="Confirm Password">
-                          
-                        </div>
-                        <!--Login Button-->
-                        <div class="form-group">
-                            <button  type="submit" class="form-buttonlogin " id="registerbtn" type="submit">Signup</button>
-                        </div>
-                        </form>
-                        <div class="form-footer">
-                            Already have an account? <label class="label-highlight" for="form_switch"> Login</label>
-                        </div>
-                    </div>
-            </div>
-        </div>
-        </div>
-        </div>
-            
-    </div>
+                  <input
+                    type="text"
+                    class="form-input"
+                    id="email"
+                    name="email"
+                    placeholder="email@example.com"
+                  />
+                </div>
+                <!--Password Input-->
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-input"
+                    type="submit"
+                    id="pass"
+                    name="password"
+                    placeholder="password"
+                  />
+                </div>
+                <!--Login Button-->
+                <div class="form-group">
+                  <button class="form-buttonlogin" id="loginbtn" type="submit">
+                    Login
+                  </button>
+                </div>
 
+                <div class="form-group">
+                  <div
+                    class="form-button"
+                    id="login"
+                    name="login"
+                    value="LOGIN"
+                    id="login_button"
+                  >
+                    <div class="text">Login with Google</div>
+                    <img class="google-icon" src="./images/google.png" />
+                  </div>
+                </div>
+
+                <div class="form-footer">
+                  Don't have an account?
+                  <label class="label-highlight" for="form_switch">
+                    Sign Up
+                  </label>
+                </div>
+              </form>
+            </div>
+            <div class="flipcard-back">
+              <div class="login-form" id="userForm">
+                <div class="form-header">
+                  <h3>Signup Form</h3>
+                  <p>Register for a new account</p>
+                </div>
+                <!--Email Input-->
+                <form id="register-form">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-input"
+                      id="regfirstName"
+                      name="name"
+                      placeholder="name"
+                    />
+                  </div>
+                  <!--Email Input-->
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-input"
+                      id="regemail"
+                      name="email"
+                      placeholder="email@example.com"
+                    />
+                  </div>
+                  <!--Password Input-->
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      class="form-input"
+                      id="regpassword"
+                      name="password"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div class="form-group checkboxs">
+                    <input type="checkbox" id="showpass" />Show Password
+                  </div>
+                  <!--Password Input-->
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      id="regpassword1"
+                      class="form-input"
+                      name="confirm_password"
+                      placeholder="Confirm Password"
+                    />
+                  </div>
+                  <!--Login Button-->
+                  <div class="form-group">
+                    <button
+                      type="submit"
+                      class="form-buttonlogin"
+                      id="registerbtn"
+                      type="submit"
+                    >
+                      Signup
+                    </button>
+                  </div>
+                </form>
+                <div class="form-footer">
+                  Already have an account?
+                  <label class="label-highlight" for="form_switch">
+                    Login</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script>
-        function handleLogin(e){
-            e.preventDefault()
-            const email = document.querySelector('#email').value
-            const pass = document.querySelector('#pass').value
+      function handleLogin(e) {
+        e.preventDefault();
+        const email = document.querySelector("#email").value;
+        const pass = document.querySelector("#pass").value;
 
-            if(email!="" && pass!=""){
-                const data = {
-                    email: email,
-                    password: pass
-                }
+        if (email != "" && pass != "") {
+          const data = {
+            email: email,
+            password: pass,
+          };
 
-                
+          fetch("http://localhost:9000/user/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          })
+            .then((res) => {
+              if (!res.ok) {
+                throw new Error("response was not ok");
+              }
 
-                fetch("http://localhost:9000/user/login",{
-                    method: "POST",
-                    headers:{
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                }).then((res)=>{
-                    if(!res.ok){
-                        throw new Error('response was not ok')
-                    }
-
-                    return res.json()
-                }).then(data=>{
-                    if(data.token){
-                        localStorage.setItem("token",data.token)
-                        window.location.href = "home.html"
-                    }
-                }
-                )
-                .catch(err=>console.log(err))
-            }
-           
+              return res.json();
+            })
+            .then((data) => {
+              if (data.token) {
+                localStorage.setItem("token", data.token);
+                window.location.href = "home.html";
+              }
+            })
+            .catch((err) => console.log(err));
         }
-
+      }
     </script>
-</body>
+  </body>
 </html>
