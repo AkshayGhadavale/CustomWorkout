@@ -18,7 +18,7 @@ let mainworkoutarr = [
 
 function showmaimarr() {
   const listElement = document.getElementById("workout-list");
-  listElement.innerHTML = ""; // Clear the existing list
+  listElement.innerHTML = ""; // Clear the existing listffff
 
   const searchText = document.getElementById("Searchbox").value.toLowerCase();
 
